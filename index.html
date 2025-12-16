@@ -69,13 +69,29 @@ h1 {
 </div>
 
 <script>
-  let likes = 0;
+  // 1️⃣ 從 localStorage 讀取讚數
+  let likes = localStorage.getItem("likes");
 
+  // 如果是第一次（還沒有存過）
+  if (likes === null) {
+    likes = 0;
+  } else {
+    likes = Number(likes);
+  }
+
+  // 2️⃣ 一進頁面就顯示讚數
+  document.getElementById("count").innerText = likes;
+
+  // 3️⃣ 按讚功能
   function like() {
     likes = likes + 1;
     document.getElementById("count").innerText = likes;
+
+    // 存進 localStorage
+    localStorage.setItem("likes", likes);
   }
 </script>
+
 
 </body>
 </html>
