@@ -4,7 +4,27 @@
 <meta charset="UTF-8">
 <title>我的小故事</title>
 <link rel="icon" href="icon.png">
+
 <style>
+body {
+  font-family: "Microsoft JhengHei", sans-serif;
+  background-color: #f5f5f5;
+  padding: 20px;
+}
+
+.story {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 600px;
+  margin: auto;
+  line-height: 1.8;
+}
+
+h1 {
+  text-align: center;
+}
+
 .like-area {
   text-align: center;
   margin-top: 20px;
@@ -18,6 +38,37 @@
   background-color: #ffcc00;
   cursor: pointer;
 }
+</style>
+</head>
+
+<body>
+
+<div class="story">
+  <h1>我的小故事</h1>
+
+  <p>
+    從前從前，有一個喜歡分享生活的人，  
+    每天都把心情寫下來。
+  </p>
+
+  <p>
+    這是一個屬於我的世界。<br>
+    不定期更新。
+  </p>
+
+  <p>
+    第一篇<br>
+    20251216 Tue. Kaohsiung, Taiwan<br>
+    今天天氣很冷。  
+    體育老師自己包緊緊，結果叫我們跑三圈操場?!
+  </p>
+
+  <div class="like-area">
+    <button onclick="like()">👍 按讚</button>
+    <span id="count">0</span> 人喜歡這篇故事
+  </div>
+</div>
+
 <script>
   let likes = 0;
 
@@ -26,45 +77,6 @@
     document.getElementById("count").innerText = likes;
   }
 </script>
-body {
-font-family: "Microsoft JhengHei", sans-serif;
-background-color: #f5f5f5;
-padding: 20px;
-}
-.story {
-background: white;
-padding: 20px;
-border-radius: 10px;
-max-width: 600px;
-margin: auto;
-line-height: 1.8;
-}
-h1 {
-text-align: center;
-}
-</style>
-</head>
-<body>
-<div class="story">
-<h1>我的小故事</h1>
-<p>
-從前從前，有一個喜歡分享生活的人，
-每天都把心情寫下來。
-</p>
-<p>
-這是一個屬於我的世界。<br>
-不定期更新。
-</p>
-<p>
-第一篇<br>
-20251216 Tue. Kaohsiung, Taiwan<br>
-今天天氣很冷。
-體育老師自己包緊緊，結果叫我們跑三圈操場?!
-</p>
-</div>
+
 </body>
 </html>
-<div class="like-area">
-  <button onclick="like()">👍 按讚</button>
-  <span id="count">0</span> 人喜歡這篇故事
-</div>
