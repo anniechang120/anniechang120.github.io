@@ -5,6 +5,27 @@
 <title>我的小故事</title>
 <link rel="icon" href="icon.png">
 <style>
+.like-area {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.like-area button {
+  font-size: 18px;
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: none;
+  background-color: #ffcc00;
+  cursor: pointer;
+}
+<script>
+  let likes = 0;
+
+  function like() {
+    likes = likes + 1;
+    document.getElementById("count").innerText = likes;
+  }
+</script>
 body {
 font-family: "Microsoft JhengHei", sans-serif;
 background-color: #f5f5f5;
@@ -31,7 +52,8 @@ text-align: center;
 每天都把心情寫下來。
 </p>
 <p>
-這是一個屬於我的世界。
+這是一個屬於我的世界。<br>
+不定期更新。
 </p>
 <p>
 第一篇<br>
@@ -42,3 +64,7 @@ text-align: center;
 </div>
 </body>
 </html>
+<div class="like-area">
+  <button onclick="like()">👍 按讚</button>
+  <span id="count">0</span> 人喜歡這篇故事
+</div>
