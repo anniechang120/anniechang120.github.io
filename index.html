@@ -61,7 +61,7 @@ h1 {
   background-color: #eee;
 }
 
-/* 夜間模式整體 */
+/* 夜間模式背景 */
 body.dark {
   background-color: #121212;
 }
@@ -72,15 +72,16 @@ body.dark .story {
   color: #e0e0e0;
 }
 
-/* 夜間模式連結 */
-body.dark a {
-  color: #9ecbff;
-}
-
-/* 夜間模式按讚 */
+/* 夜間模式按鈕 */
 body.dark .like-area {
   border-top: 1px solid #333;
 }
+
+body.dark button {
+  background-color: #444;
+  color: #fff;
+}
+
 
 </style>
 
@@ -147,9 +148,12 @@ body.dark .like-area {
 <script>
   const toggleBtn = document.getElementById("modeToggle");
 
+  <script>
+  const toggleBtn = document.getElementById("modeToggle");
+
   // 讀取之前的模式
-  const mode = localStorage.getItem("MODE");
-  if (mode === "dark") {
+  const savedMode = localStorage.getItem("MODE");
+  if (savedMode === "dark") {
     document.body.classList.add("dark");
     toggleBtn.innerText = "☀️ 日間模式";
   }
@@ -165,7 +169,6 @@ body.dark .like-area {
       toggleBtn.innerText = "🌙 夜間模式";
     }
   };
-</script>
 
 </script>
 
