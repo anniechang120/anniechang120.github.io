@@ -50,7 +50,7 @@ h1 {
   background-color: #ffcc00;
   cursor: pointer;
 }
-/* 夜間模式按鈕 */
+/* 🌙 夜間模式切換按鈕（白天） */
 #modeToggle {
   float: right;
   font-size: 14px;
@@ -59,29 +59,30 @@ h1 {
   border: none;
   cursor: pointer;
   background-color: #eee;
+  color: #000;      /* 白天字色 */
 }
 
-/* 夜間模式背景 */
+/* 🌙 夜間模式背景 */
 body.dark {
   background-color: #121212;
 }
 
-/* 夜間模式文章 */
+/* 🌙 夜間模式文章 */
 body.dark .story {
   background-color: #1e1e1e;
   color: #e0e0e0;
 }
 
-/* 夜間模式按鈕 */
+/* 🌙 夜間模式按讚區 */
 body.dark .like-area {
   border-top: 1px solid #333;
 }
 
-body.dark button {
+/* 🌙 夜間模式切換按鈕（夜間） */
+body.dark #modeToggle {
   background-color: #444;
-  color: #fff;
+  color: #fff;      /* 夜間字色 */
 }
-
 
 </style>
 
