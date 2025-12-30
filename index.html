@@ -84,6 +84,58 @@ body.dark #modeToggle {
   color: #fff;      /* 夜間字色 */
 }
 
+/* 推薦同學網站區塊 */
+.friends {
+  margin-top: 50px;
+  padding-top: 20px;
+  border-top: 1px dashed #ccc;
+}
+
+.friends h2 {
+  font-size: 22px;
+  margin-bottom: 16px;
+}
+
+/* 單一推薦項目 */
+.friend-card {
+  display: block;
+  padding: 14px;
+  margin-bottom: 14px;
+  border-radius: 10px;
+  text-decoration: none;
+  color: inherit;
+  background-color: #fafafa;
+  transition: background 0.2s;
+}
+
+.friend-card:hover {
+  background-color: #f0f0f0;
+}
+
+.friend-card .name {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+
+.friend-card .desc {
+  font-size: 14px;
+  color: #666;
+}
+body.dark .friend-card {
+  background-color: #2a2a2a;
+}
+
+body.dark .friend-card:hover {
+  background-color: #333;
+}
+
+body.dark .friend-card .desc {
+  color: #aaa;
+}
+
+
+
 </style>
 
 </head>
@@ -122,6 +174,15 @@ body.dark #modeToggle {
     <button onclick="like()">👍 按讚</button>
     <span id="count">0</span> 我喜歡這篇故事~~
   </div>
+  <div class="friends">
+  <h2>📌 推薦的同學網站</h2>
+
+  <a class="friend-card" href="https://delia0826.github.io/index.html" target="_blank">
+      <div class="name">12的小遊戲>1>1di
+       <div class="desc">好玩解壓刮刮樂</div>
+    </div>
+  </a>
+
 </div>
 
 <script>
